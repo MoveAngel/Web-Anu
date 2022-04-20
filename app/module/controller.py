@@ -7,8 +7,9 @@ def index():
     if request.method == 'POST':
         name = request.form['name']
         nim = request.form['nim']
+        prodi = request.form['prodi']
         try:
-            mhs = Mahasiswa(nim=nim, name=name)
+            mhs = Mahasiswa(nim=nim, name=name, prodi=prodi)
             db.session.add(mhs)
             db.session.commit()
         except Exception as e:
@@ -29,10 +30,12 @@ def update():
         id = request.form['id']
         name = request.form['name']
         nim = request.form['nim']
+        prodi = request.form['prodi']
         try:
             mhs = Mahasiswa.query.filter_by(id=id).first()
             mhs.name = name
             mhs.nim = nim
+            mhs.prodi = prodi
             db.session.commit()
         except Exception as e:
             print("Failed to update data")

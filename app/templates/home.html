@@ -8,20 +8,26 @@
     <!--<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">-->
 </head>
 <body>
-<form action="/" method="POST" class="was-validated">
+<form action="/" method="POST">
     <div class="container">
         <h3>Form Add Mahasiswa</h3>
             <div class="mb-3 mt-3">
                 <label class="form-label">Nomor Induk Mahasiswa</label>
                 <input type="text" name="nim" class="form-control" required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
             </div>
             <div class="mb-3">
                 <label class="form-label">Nama Lengkap</label>
                 <input type="text" name="name" class="form-control" required>
-                <div class="valid-feedback">Valid.</div>
-                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Program Studi</label>
+                <select name="prodi" class="form-select" required>
+                    <option value="#" disabled selected hidden>--Pilih Prodi--</option>
+                    <option value="Informatika">Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Sains Data">Sains Data</option>
+                    <option value="Teknik Elektro">Teknik Elektro</option>
+                </select>
             </div>
         <button type="submit" class="btn btn-primary">Tambah Data</button>
     </div>
@@ -35,6 +41,7 @@
             <th scope="col">No</th>
             <th scope="col">Nomor Induk Mahasiswa</th>
             <th scope="col">Nama</th>
+            <th scope="col">Program Studi</th>
             <th scope="col">Aksi</th>
         </tr>
         </thead>
@@ -44,6 +51,7 @@
                         <td>{{ no }}</td>
                         <td>{{ x.nim }}</td>
                         <td>{{ x.name }}</td>
+                        <td>{{ x.prodi }}</td>
                         <td><a href="form-update/{{ x.id }}" class="btn btn-warning">Edit</a> | <a href="delete/{{ x.id }}" class="btn btn-danger">Delete</a></td>
                     </tr>
                 {% endfor %}
