@@ -1,13 +1,13 @@
-# CRUD using FLask and SQLAlchemy 
-
-## - Install requirement for project
-```
-pip install -r requirements.txt
-```
+# CRUD using FLask and SQlAlchemy 
 
 ## - Install virtualenv for project dependencies
 ```
 virtualenv <name-env>
+```
+
+## - Install requirement for project
+```
+pip install -r requirements.txt
 ```
 
 ## - Create database and table
@@ -27,6 +27,11 @@ flask db upgrade
 ```
 FLASK_APP = run.py
 FLASK_ENV = development
+```
+
+## - Running the project
+```
+flask run
 ```
 
 ## Credits

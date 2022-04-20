@@ -8,6 +8,7 @@ MarkupSafe
 numpy
 pandas
 python-dateutil
+python-dotenv
 pytz
 six
 SQLAlchemy
