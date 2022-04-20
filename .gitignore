@@ -1,0 +1,9 @@
+# Created by https://www.gitignore.io/api/osx,venv,macos,linux,python,django,pycharm,virtualenv
+
+### Django ###
+__pycache__/
+venv/
+.idea
+Procfile
+.env
+crud-new/

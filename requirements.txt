@@ -1,0 +1,14 @@
+Click
+Flask
+Flask-SQLAlchemy
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+numpy
+pandas
+python-dateutil
+pytz
+six
+SQLAlchemy
+Werkzeug
