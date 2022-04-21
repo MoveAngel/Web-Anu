@@ -7,3 +7,6 @@ venv/
 Procfile
 .env
 crud-new/
+flaskcrud.db
+dbtest.db
+migrations/

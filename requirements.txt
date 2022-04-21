@@ -1,6 +1,7 @@
 Click
 Flask
 Flask-SQLAlchemy
+Flask-Migrate
 gunicorn
 itsdangerous
 Jinja2
